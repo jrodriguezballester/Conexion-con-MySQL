@@ -22,5 +22,85 @@ Conexion a MySQL
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:Conexion_a_MySQL.Form1.BtnConexion_Click(System.Object,System.EventArgs)">
+ <summary>
+ Hace o comprueba que exista un ConexionBD.conexion 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Conexion_a_MySQL.Form1.BtnConsulta_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la consulta SQL que hay en el metodo Consulta()
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param> 
+</member>
+<member name="M:Conexion_a_MySQL.Form1.BtnInsercion_Click(System.Object,System.EventArgs)">
+ <summary>
+ Ejecuta el insert SQL que hay en el metodo Insert()
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Conexion_a_MySQL.Form1.BtnConsultaEsc_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el resultado de la consulta SQL del metodo ConsultaEscalar()
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Conexion_a_MySQL.Form1.BtnConsultaDesc_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra los resultados de una consulta SQL una vez cerrada la conexion
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Conexion_a_MySQL.Form1.Mostrar(MySql.Data.MySqlClient.MySqlDataReader)">
+ <summary>
+ Muestra en un ListBox el dataReader 
+ </summary>
+ <param name="dataReader"></param>
+</member>
+<member name="M:Conexion_a_MySQL.Form1.MostarDesconectado(System.Data.DataSet)">
+ <summary>
+ Muestra en un DataGridView los resultados de un dataSet
+ </summary>
+ <param name="dataSet"></param>
+</member>
+<member name="M:Conexion_a_MySQL.ConexionBD.Comprobar_conexion">
+ <summary>
+ Comprueba si puede conectarse a la BD
+ </summary>
+</member>
+<member name="M:Conexion_a_MySQL.ConexionBD.Consulta">
+ <summary>
+ Ejecuta una consulta SQL del tipo ExecuteReader
+ </summary>
+ <returns>dataReader resultado de la sentencia SQL</returns>
+</member>
+<member name="M:Conexion_a_MySQL.ConexionBD.Insert">
+ <summary>
+ Ejecuta una sentencia SQL de tipo Insert en la BD
+ </summary>
+</member>
+<member name="M:Conexion_a_MySQL.ConexionBD.ConsultaEscalar">
+ <summary>
+ Ejecuta sentencia SQL con un ExecuteScalar
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Conexion_a_MySQL.ConexionBD.RellenarDatosDesconectadoBD">
+ <summary>
+ Ejecuta sentencia SQL y la guarda en un dataset y cierra la conexion a BD
+ </summary>
+ <returns>dataSet resultado de una sentencia SQL</returns>
+</member>
+<member name="M:Conexion_a_MySQL.ConexionBD.CerrarDataReader">
+ <summary>
+ Cierra dataReader y conexion
+ </summary>
+</member>
 </members>
 </doc>

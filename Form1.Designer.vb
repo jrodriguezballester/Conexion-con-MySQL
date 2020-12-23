@@ -22,12 +22,15 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BtnConsultaDesc = New System.Windows.Forms.Button()
         Me.btnConsulta = New System.Windows.Forms.Button()
-        Me.ListaDepartamentos = New System.Windows.Forms.ListBox()
         Me.BtnConsultaEsc = New System.Windows.Forms.Button()
         Me.BtnInsercion = New System.Windows.Forms.Button()
         Me.BtnConexion = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ListaDepartamentos = New System.Windows.Forms.ListBox()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnConsultaDesc
@@ -49,16 +52,6 @@ Partial Class Form1
         Me.btnConsulta.TabIndex = 2
         Me.btnConsulta.Text = "Consulta"
         Me.btnConsulta.UseVisualStyleBackColor = True
-        '
-        'ListaDepartamentos
-        '
-        Me.ListaDepartamentos.FormattingEnabled = True
-        Me.ListaDepartamentos.ItemHeight = 16
-        Me.ListaDepartamentos.Location = New System.Drawing.Point(207, 164)
-        Me.ListaDepartamentos.Margin = New System.Windows.Forms.Padding(4)
-        Me.ListaDepartamentos.Name = "ListaDepartamentos"
-        Me.ListaDepartamentos.Size = New System.Drawing.Size(346, 180)
-        Me.ListaDepartamentos.TabIndex = 8
         '
         'BtnConsultaEsc
         '
@@ -90,12 +83,44 @@ Partial Class Form1
         Me.BtnConexion.Text = "Conexion"
         Me.BtnConexion.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(207, 36)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(494, 281)
+        Me.DataGridView1.TabIndex = 9
+        Me.DataGridView1.Visible = False
+        '
+        'ListaDepartamentos
+        '
+        Me.ListaDepartamentos.FormattingEnabled = True
+        Me.ListaDepartamentos.ItemHeight = 16
+        Me.ListaDepartamentos.Location = New System.Drawing.Point(207, 36)
+        Me.ListaDepartamentos.Margin = New System.Windows.Forms.Padding(4)
+        Me.ListaDepartamentos.Name = "ListaDepartamentos"
+        Me.ListaDepartamentos.Size = New System.Drawing.Size(494, 292)
+        Me.ListaDepartamentos.TabIndex = 8
+        Me.ListaDepartamentos.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(566, 367)
+        Me.ClientSize = New System.Drawing.Size(726, 351)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.BtnConsultaDesc)
         Me.Controls.Add(Me.btnConsulta)
         Me.Controls.Add(Me.ListaDepartamentos)
@@ -104,14 +129,16 @@ Partial Class Form1
         Me.Controls.Add(Me.BtnConexion)
         Me.Name = "Form1"
         Me.Text = "Conexion a MySQL"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents BtnConsultaDesc As Button
     Friend WithEvents btnConsulta As Button
-    Friend WithEvents ListaDepartamentos As ListBox
     Friend WithEvents BtnConsultaEsc As Button
     Friend WithEvents BtnInsercion As Button
     Friend WithEvents BtnConexion As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ListaDepartamentos As ListBox
 End Class
